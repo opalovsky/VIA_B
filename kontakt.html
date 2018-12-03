@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+	<html lang="cs">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+			<title>VIA projekt</title>
+
+			<link rel="stylesheet" href="css/bootstrap.min.css"/>
+			<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+			<link href="./css/lightbox.css" rel="stylesheet">
+			<script type="text/javascript" src="./js/jquery.min.js"></script>
+			<script type="text/javascript" src="./js/loader.js"></script>
+			<script type="text/javascript" src="./js/main.js"></script>
+			<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+			<script src="js/lightbox.js"></script>
+			<script src="js/odpocet.js"></script>
+
+		</head>
+	<body onload="startclock()">
+		<div class="container">
+			<nav class="navbar navbar-expand-md navbar-light bg-light">
+				<a class="navbar-brand" href="index.html">Meteostanice</a>
+				<img src="images/temp.jpg" width="50px" id="logo"/>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="navbar-nav">
+
+
+						<li class="nav-item">
+							<a class="nav-link" href="./index.html">Domů<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./blog.html">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./ometeostanici.html">O meteostanici</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Další odkazy
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="./galerie.html">Galerie</a>
+							</div>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="./kontakt.html">Kontakt</a>
+						</li>
+
+					</ul>
+				</div>
+			</nav>
+
+		<!---------------------------------->
+
+			<div id="header">
+				<div class="row">
+					<div class="col-8">
+						<h1 class="mt-4 ml-4">METEOSTANICE
+							<br><small>Kontakt</small></h1>
+					</div>
+					<div class="col-4">
+						<img class="img-fluid img-thumbnail d-block mx-auto mt-2 mb-2" width="50%" src="images/temp.jpg"/>
+					</div>
+				</div>
+			</div>
+
+			<!---------------------------------->
+
+			<div id="content">
+				<div class="row">
+					<div class="col-lg-5 ml-4 mt-4 mr-4 mb-4">
+						<h4>Kontaktní formulář</h4>
+						<small>(Použití výchozích hlášek při validaci)</small>
+						<form id="needs-validation">
+							<div class="form-group">
+								<label for="formular-jmeno">Jméno</label>
+								<input type="text" class="form-control" id="formular-jmeno" placeholder="Jan Novák" required="required">
+
+							</div>
+							<div class="form-group">
+								<label for="formular-email">Email</label>
+								<input type="email" class="form-control" id="formular-email" placeholder="jan@novak.cz" required="required">
+
+							</div>
+							<div class="form-group">
+								<label for="formular-text">Text</label>
+								<textarea class="form-control" id="formular-text" rows="3" required="required"></textarea>
+							</div>
+							<button class="btn btn-primary" type="submit">Odeslat</button>
+						</form>
+					</div>
+					<div class="col-lg-5 ml-4 mt-4 mr-4 mb-4">
+						<h4>Kontaktní formulář 2</h4>
+						<small>(Použití vlastních hlášek při validaci)</small>
+						<form id="needs-validation2" novalidate="novalidate">
+							<div class="form-group">
+								<label for="formular-jmeno2">Jméno</label>
+								<input type="text" class="form-control" id="formular-jmeno2" placeholder="Jan Novák" required="required">
+								<div class="invalid-feedback">
+									Zadejte prosím své celé jméno.
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="formular-email2">Email</label>
+								<input type="email" class="form-control" id="formular-email2" placeholder="jan@novak.cz" required="required">
+								<div class="invalid-feedback">
+									Zadejte prosím validní emailovou adresu.
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="formular-text2">Text</label>
+								<textarea class="form-control" id="formular-text2" rows="3" required="required"></textarea>
+								<div class="invalid-feedback">
+									Zadejte prosím text.
+								</div>
+							</div>
+							<button class="btn btn-primary" type="submit">Odeslat</button>
+						</form>
+
+						<script>
+                            (function() {
+                                'use strict';
+                                window.addEventListener('load', function() {
+                                    var form = document.getElementById('needs-validation2');
+                                    form.addEventListener('submit', function(event) {
+                                        if (form.checkValidity() === false) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                        }
+                                        form.classList.add('was-validated');
+                                    }, false);
+                                }, false);
+                            })();
+						</script>
+
+					</div>
+				</div>
+			</div>
+
+		<!---------------------------------------->
+
+			<footer>
+				<div class="col-sm-12">
+					<div class="row" id="footer"> </div>
+					<div class="row" id="footer2">
+						<div class="col-12">
+							<p class="text-center">Ondřej Palovský<br>Meteostanice Ondra</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
+
+<div style="display:none;"><endora></div>
